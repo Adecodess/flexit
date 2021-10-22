@@ -1,0 +1,11 @@
+#pet-select {
+  width: 150px;
+  height: 50px;
+  border: 1px solid #ccc;
+  background-color: white;
+  text-align: center;
+}
+
+#pet-select:focus {
+  outline: none;
+}
