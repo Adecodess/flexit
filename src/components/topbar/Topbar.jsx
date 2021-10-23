@@ -1,20 +1,18 @@
 import profile from '../../asset/images/profile.jpg';
-import React, { useState } from 'react';
+import React from 'react';
 
 import '../topbar/tobar.css';
 import { Search, NotificationsNone } from '@mui/icons-material';
 
-import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context';
 
 export default function Topbar() {
+  // request fucntions and states from context ApI
   const { handleSubmit, query, setQuery } = useGlobalContext();
   return (
     <main className='topbarContainer'>
       <section className='topbarLeft'>
-        <Link to='/' style={{ textDecoration: 'none' }}>
-          <span className='logo'>bluecube</span>
-        </Link>
+        <span className='logo'>bluecube</span>
       </section>
 
       <section className='topbarCenter'>
