@@ -5,10 +5,10 @@ import '../topbar/tobar.css';
 import { Search, NotificationsNone } from '@mui/icons-material';
 
 import { Link } from 'react-router-dom';
-import Feed from '../feed/Feed';
+import { useGlobalContext } from '../../context';
 
-export default function Topbar({ handleSubmit }) {
-  // const { handleSubmit } = Feed;
+export default function Topbar() {
+  const { handleSubmit, query, setQuery } = useGlobalContext();
   return (
     <main className='topbarContainer'>
       <section className='topbarLeft'>
@@ -20,7 +20,12 @@ export default function Topbar({ handleSubmit }) {
       <section className='topbarCenter'>
         <div className='searchbar'>
           <Search className='searchIcon' />
-          <input placeholder='Find Something' className='searchInput' />
+          <input
+            placeholder='Find Something'
+            className='searchInput'
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
           <button
             className='topbarCenterButton'
             type='submit'
