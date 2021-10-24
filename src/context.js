@@ -90,12 +90,7 @@ const AppProvider = ({ children }) => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  const openSidebar = () => {
-    setIsSidebarOpen(true);
-  };
-  const closeSidebar = () => {
-    setIsSidebarOpen(false);
-  };
+
   return (
     <AppContext.Provider
       value={{
@@ -109,8 +104,7 @@ const AppProvider = ({ children }) => {
         setIsOpen,
         photos,
         toggleDropdown,
-        openSidebar,
-        closeSidebar,
+
         isSidebarOpen,
       }}>
       {children}
