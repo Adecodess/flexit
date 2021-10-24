@@ -1,23 +1,26 @@
+import profileImg from './asset/images/profile.jpg';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { FiMessageSquare } from 'react-icons/fi';
 export const Data = [
   {
-    title: 'Marketing',
-    dec: 'lorem5',
-
-    cName: 'dropdown-link',
+    id: 1,
+    img: profileImg,
+    title: 'Micheal Liked You',
+    desc: 'About 25 minutes ago',
+    icon: <AiOutlineHeart />,
   },
   {
-    title: 'Consulting',
-    dec: 'lorem5',
-    cName: 'dropdown-link',
+    id: 2,
+    title: 'Jack Liked You',
+    desc: 'About 16 minutes',
+    img: profileImg,
+    icon: <AiOutlineHeart />,
   },
   {
-    title: 'Design',
-    dec: 'lorem5',
-    cName: 'dropdown-link',
-  },
-  {
-    title: 'Development',
-    dec: 'lorem5',
-    cName: 'dropdown-link',
+    id: 3,
+    title: 'Martin Commented on Your Photo',
+    desc: 'About 10 minutes ago',
+    img: profileImg,
+    icon: <FiMessageSquare />,
   },
 ];

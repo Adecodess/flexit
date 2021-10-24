@@ -14,7 +14,7 @@ const Feed = () => {
         <section className='photos'>
           <div className='photos-center'>
             {photos.map((image, index) => {
-              return <Photo key={image.id} {...image} />;
+              return <Photo key={index} {...image} />;
             })}
           </div>
           {loading && <h2 className='loading'>Loading...</h2>}

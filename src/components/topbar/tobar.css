@@ -109,6 +109,48 @@
   margin: 4px 2px;
   cursor: pointer;
 }
+@media screen and (max-width: 600px) {
+  .topbarCenterButton {
+    display: none;
+  }
+  .topbarLeft {
+    display: flex;
+  }
+  .topbarContainer {
+    display: block;
+  }
+  .searchbar {
+    width: 30%;
+    height: 32px;
+    margin-left: 15px;
+  }
+  .searchbar > input:placeholder {
+    font-size: 12px;
+  }
+
+  .topbarRight {
+    display: none;
+  }
+  .topbarRightBig {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    float: right;
+    justify-content: flex-end;
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .topbarRightBig {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .topbarRightBig {
+    display: none;
+  }
+}
+
 .profileName {
   font-size: 15px;
   color: darkgray;

@@ -41,8 +41,3 @@
 .sidebarListItem:hover {
   background-color: rgba(187, 186, 186, 0.2);
 }
-
-.sidebarIcon {
-  margin-right: 5px;
-  font-size: 20px !important;
-}

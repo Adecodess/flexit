@@ -1,0 +1,77 @@
+.dropdown__container {
+  background-color: white;
+
+  padding: 1rem;
+  border-radius: 5px;
+  position: absolute;
+  top: 100%;
+  left: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 5px;
+  transition: all 0.5s ease;
+
+  opacity: 0;
+}
+.show {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  position: absolute;
+  top: 100%;
+  left: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 5px;
+  transition: all 0.5s ease;
+  transform: translateY(10px);
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* .dropdown__container > ul {
+  transition: all 0.5s;
+  pointer-events: none;
+} */
+
+.dropdown__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  margin-right: 10px;
+  margin: 10px;
+}
+.item_desc {
+  line-height: 0;
+  padding-top: 12px;
+}
+.item_desc > h3 {
+  font-size: 13px;
+  width: 150px;
+}
+.item_desc > p {
+  font-size: 10px;
+}
+.dropdown__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profileName > h3 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}

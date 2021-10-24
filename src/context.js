@@ -12,6 +12,7 @@ const AppProvider = ({ children }) => {
   const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(0);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const fetchImages = async () => {
     setLoading(true);
@@ -49,9 +50,10 @@ const AppProvider = ({ children }) => {
     } catch (error) {
       setLoading(false);
       console.log(error);
-      if (error.message === 'Request failed with status code 403') {
-        alert('Request limit reached');
-      }
+
+      // if (error.message === 'Request failed with status code 403') {
+      // alert('Request limit reached');
+      // }
     }
   };
 
@@ -68,7 +70,7 @@ const AppProvider = ({ children }) => {
       if (
         // check if the innerheigt and vertical scroll added together is greater  or equal to  the document bdoy height: ;
         !loading &&
-        window.innerHeight + window.scrollY >= document.body.scrollHeight - 50
+        window.innerHeight + window.scrollY >= document.body.scrollHeight - 2
       ) {
         // if the condition is true, increase the page number
         setPage((oldPage) => {
@@ -84,9 +86,33 @@ const AppProvider = ({ children }) => {
     e.preventDefault();
     setPage(1);
   };
+  const [isOpen, setIsOpen] = useState(true);
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+  const openSidebar = () => {
+    setIsSidebarOpen(true);
+  };
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
   return (
     <AppContext.Provider
-      value={{ handleSubmit, query, setQuery, page, loading, setPage, photos }}>
+      value={{
+        handleSubmit,
+        query,
+        setQuery,
+        page,
+        loading,
+        setPage,
+        isOpen,
+        setIsOpen,
+        photos,
+        toggleDropdown,
+        openSidebar,
+        closeSidebar,
+        isSidebarOpen,
+      }}>
       {children}
     </AppContext.Provider>
   );
